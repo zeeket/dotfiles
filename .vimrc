@@ -1,5 +1,5 @@
 execute pathogen#infect() 
-"dont put anything before this line
+"dont put anything before this line https://github.com/tpope/vim-pathogen
 set nocompatible
 
 se nu
