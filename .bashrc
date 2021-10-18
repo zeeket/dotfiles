@@ -1,5 +1,12 @@
+#!/bin/bash
+export PS1="\[\e[36m\]\u\[\e[0m\]@\[\e[35m\]\h\[\e[37m\]\w\$\[\e[0m\]"
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-export PS1="\033[0;36m\u\033[0m@\033[0;33m\h\033[0m:\w$ "
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    #echo "Loading MacOS prefs from .bashrc"
+    source .macprefs
+fi
+
 export CLICOLOR=1
