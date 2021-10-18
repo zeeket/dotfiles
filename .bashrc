@@ -6,7 +6,7 @@ fi
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     #echo "Loading MacOS prefs from .bashrc"
-    source .macprefs
+    [[ -s ~/.macprefs ]] && source ~/.macprefs
 fi
 
 export CLICOLOR=1
