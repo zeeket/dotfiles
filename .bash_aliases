@@ -1,3 +1,4 @@
+#!/bin/bash
 #  0   0   0  0  000   
 # 000  0   0 000 0
 # 0 0  0   0 0 0 0
@@ -36,3 +37,4 @@ alias tar='tar --verbose'
 alias untar='tar -zxvf'
 alias ping='ping -c 15'
 alias watchdiff="watch --color git diff --color=always"
+alias dungeon='ssh -p 23 terminal@underhound.eu'
