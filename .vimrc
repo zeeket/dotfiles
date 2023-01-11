@@ -31,3 +31,9 @@ set mouse=a
 "map Y to act like D and C, ie to yank until EOL, rather than act as yy, which
 "is the default
 map Y y$
+
+"YAML documents are required to have a 2 space indentation
+augroup YAML
+	autocmd!
+	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+augroup END
