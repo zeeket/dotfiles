@@ -6,6 +6,18 @@
 # 000  0   0 000   0
 # 0 0  0   0 0 0   0
 # 0 0  000 0 0 0 000 copyleft zeeket
+function has() { if [ ! $1 ]; then 
+	echo -e "Usage: has <command>\nCheck if a command exists on this system"
+	return 1
+elif [ -x "$(command -v $1)" ]; then 
+	echo -e "$1 seems to be installed"
+	return 0
+else 
+	echo -e "$1 was not found"
+	return 1
+fi
+}
+
 function encrypt() { for item in "$@"; 
 do
 	echo "Encrypting: $item";
