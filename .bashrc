@@ -10,3 +10,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 export CLICOLOR=1
+
+# Auto-create the upstream branch on `git push` instead of failing
+if [ -x "$(command -v git)" ] && [ "$(git config --global --get push.autoSetupRemote)" != "true" ]; then
+    git config --global push.autoSetupRemote true
+fi
